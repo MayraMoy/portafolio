@@ -500,15 +500,21 @@ body::before {
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .menu-toggle { display: block; padding:12px }
+            /* Asegurar botón visible y con buen contraste (temporal) */
+            .menu-toggle { display: block !important; padding:12px; z-index:1500; left:18px; transition:left var(--transition); background: rgba(255,255,255,0.92); color:#111; border:1px solid rgba(0,0,0,0.08); box-shadow: 0 6px 18px rgba(0,0,0,0.28) }
 
             .sidebar {
-                transform: translateX(-100%);
+                transform: translateX(-110%); /* asegurar que quede fuera de pantalla */
                 width: var(--sidebar-w-expanded);
                 box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+                z-index:1400; /* igual o encima del botón si es necesario */
+                left:0;
+                visibility:visible;
+                background: rgba(10,10,10,0.95);
             }
 
-            .sidebar.active { transform: translateX(0); width: var(--sidebar-w-expanded); }
+            /* Cuando está activo debe aparecer claramente */
+            .sidebar.active { transform: translateX(0); width: var(--sidebar-w-expanded); z-index:1400; left:0 }
 
             /* Se revelan los textos cuando el sidebar está activo (touch devices) */
             .sidebar.active .nav-text,
@@ -519,6 +525,9 @@ body::before {
                 opacity: 1;
                 transform: translateX(0);
             }
+
+            /* Evitar que el menú tape el icono; mover el botón hacia la derecha cuando el sidebar está abierto */
+            body.sidebar-open .menu-toggle { left: calc(var(--sidebar-w-expanded) + 16px); }
 
             .main-content { margin-left: 0; padding: 80px 20px }
             .nav-menu a { padding: 12px 16px; font-size: 1rem }
@@ -591,7 +600,7 @@ a{color:inherit}
 /* MENU (mobile button) */
 .menu-toggle{
   position:fixed; top:18px; left:18px;
-  z-index:1200;
+  z-index:1400; /* sobre el overlay */
   display:none;
   background: rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.12);
@@ -722,3 +731,4 @@ body.no-scroll{height:100vh; overflow:hidden}
 /* Small niceties */
 .nav-menu::-webkit-scrollbar{height:6px;width:6px}
 .nav-menu::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.06);border-radius:6px}
+

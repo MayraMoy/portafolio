@@ -12,6 +12,7 @@ const menuToggle = document.getElementById('menuToggle');
             menuToggle.classList.toggle('active', isOpen);
             menuToggle.setAttribute('aria-expanded', isOpen);
             document.body.classList.toggle('no-scroll', isOpen);
+            document.body.classList.toggle('sidebar-open', isOpen);
 
             if (isOpen) {
                 // Enfocar primer enlace para accesibilidad
@@ -28,6 +29,7 @@ const menuToggle = document.getElementById('menuToggle');
             menuToggle.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
             document.body.classList.remove('no-scroll');
+            document.body.classList.remove('sidebar-open');
             menuToggle.focus();
         });
 
@@ -39,6 +41,7 @@ const menuToggle = document.getElementById('menuToggle');
                     menuToggle.classList.remove('active');
                     menuToggle.setAttribute('aria-expanded', 'false');
                     document.body.classList.remove('no-scroll');
+                    document.body.classList.remove('sidebar-open');
                     menuToggle.focus();
                 }
             });
@@ -52,6 +55,7 @@ const menuToggle = document.getElementById('menuToggle');
                 menuToggle.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
                 document.body.classList.remove('no-scroll');
+                document.body.classList.remove('sidebar-open');
                 menuToggle.focus();
             }
         });
