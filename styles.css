@@ -500,19 +500,17 @@ body::before {
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .menu-toggle {
-                display: block;
-            }
+            .menu-toggle { display: block; padding:12px }
 
             .sidebar {
                 transform: translateX(-100%);
-                width: 280px;
+                width: var(--sidebar-w-expanded);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.45);
             }
 
-            .sidebar.active {
-                transform: translateX(0);
-            }
+            .sidebar.active { transform: translateX(0); width: var(--sidebar-w-expanded); }
 
+            /* Se revelan los textos cuando el sidebar está activo (touch devices) */
             .sidebar.active .nav-text,
             .sidebar.active .sidebar-header h2,
             .sidebar.active .sidebar-header p,
@@ -522,22 +520,12 @@ body::before {
                 transform: translateX(0);
             }
 
-            .main-content {
-                margin-left: 0;
-                padding: 80px 30px 40px;
-            }
+            .main-content { margin-left: 0; padding: 80px 20px }
+            .nav-menu a { padding: 12px 16px; font-size: 1rem }
 
-            .section h1 {
-                font-size: 40px;
-            }
-
-            .section h2 {
-                font-size: 36px;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .section { min-height: auto; padding: 36px 12px }
+            .education-item { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: repeat(2,1fr) }
         }
 
         @media (max-width: 640px) {
@@ -623,8 +611,13 @@ a{color:inherit}
   position:fixed; inset:0; background:rgba(0,0,0,0.5);
   backdrop-filter: blur(4px);
   z-index:1000; opacity:0; visibility:hidden; transition:opacity var(--transition), visibility var(--transition);
+  pointer-events:none; /* evita clicks cuando no está activo */
 }
-.overlay.active{opacity:1; visibility:visible}
+.overlay.active{opacity:1; visibility:visible; pointer-events:auto}
+
+/* Evitar scroll del body cuando el sidebar está activo (añadir/remover clase con JS) */
+body.no-scroll{height:100vh; overflow:hidden}
+
 
 /* SIDEBAR */
 .sidebar{

@@ -3,16 +3,32 @@ const menuToggle = document.getElementById('menuToggle');
         const overlay = document.getElementById('overlay');
         const navLinks = document.querySelectorAll('.nav-link');
 
+        // Inicializar atributo aria
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+
         menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+            const isOpen = sidebar.classList.toggle('active');
+            overlay.classList.toggle('active', isOpen);
+            menuToggle.classList.toggle('active', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            document.body.classList.toggle('no-scroll', isOpen);
+
+            if (isOpen) {
+                // Enfocar primer enlace para accesibilidad
+                const firstLink = document.querySelector('.nav-menu .nav-link');
+                if (firstLink) firstLink.focus();
+            } else {
+                menuToggle.focus();
+            }
         });
 
         overlay.addEventListener('click', () => {
             sidebar.classList.remove('active');
             overlay.classList.remove('active');
             menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('no-scroll');
+            menuToggle.focus();
         });
 
         navLinks.forEach(link => {
@@ -21,8 +37,23 @@ const menuToggle = document.getElementById('menuToggle');
                     sidebar.classList.remove('active');
                     overlay.classList.remove('active');
                     menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('no-scroll');
+                    menuToggle.focus();
                 }
             });
+        });
+
+        // Cerrar con Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('no-scroll');
+                menuToggle.focus();
+            }
         });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
