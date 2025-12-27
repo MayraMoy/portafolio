@@ -78,7 +78,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   opacity: 0.9;
 }
@@ -423,6 +423,7 @@ body.no-scroll {
   z-index: 1;
   max-width: 1200px;
   margin-right: auto;
+  background: transparent;
 }
 
 .sidebar:hover + .main-content {
@@ -441,6 +442,9 @@ body.no-scroll {
   max-width: 1100px;
   margin: 0 auto;
   padding: 48px 16px;
+  position: relative;
+  z-index: auto;
+  background: transparent;
 }
 
 .section h1 {
@@ -592,12 +596,15 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+  z-index: auto;
 }
 
 .education-item {
   padding: 30px;
   background: var(--glass-medium);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
@@ -606,12 +613,20 @@ body.no-scroll {
   grid-template-columns: 1fr 300px;
   gap: 30px;
   align-items: center;
+  position: relative;
+  z-index: auto;
 }
 
 .education-item:hover {
   background: var(--glass-strong);
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.education-content {
+  position: relative;
+  z-index: auto;
 }
 
 .education-content h3 {
@@ -643,12 +658,16 @@ body.no-scroll {
   border: 2px solid rgba(255, 255, 255, 0.3);
   transition: all var(--transition-normal);
   cursor: pointer;
+  position: relative;
+  z-index: auto;
+  background: var(--glass-light);
 }
 
 .certificate-image:hover {
   transform: scale(1.05);
   border-color: rgba(255, 255, 255, 0.5);
   box-shadow: var(--shadow-md);
+  z-index: 20;
 }
 
 .certificate-image img {
@@ -657,6 +676,7 @@ body.no-scroll {
   object-fit: cover;
   object-position: center;
   transition: transform var(--transition-normal);
+  display: block;
 }
 
 .certificate-image:hover img {
@@ -749,11 +769,20 @@ body.no-scroll {
   /* Ajustar padding general */
   .main-content {
     padding: 80px 16px 40px;
+    background: transparent !important;
   }
 
   .section {
     padding: 40px 16px;
     min-height: auto;
+    background: transparent !important;
+  }
+
+  /* Asegurar que el contenido sea visible */
+  .section > div {
+    width: 100%;
+    position: relative;
+    z-index: auto;
   }
 
   /* Tipografía móvil */
