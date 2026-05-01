@@ -1,0 +1,182 @@
+.about {
+    padding: 100px 5%;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: #1035a8;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+/* Columna de Texto */
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+/* Sección de Educación (Línea de tiempo) */
+.education-section {
+    margin-top: 3.5rem;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1035a8;
+    margin-bottom: 1.5rem;
+}
+
+.timeline {
+    border-left: 2px solid #e2e8f0;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #1035a8;
+    border-radius: 50%;
+    left: -9px;
+    top: 5px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 53, 168, 0.2);
+}
+
+.timeline-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-institution {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.complementary-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/* Columna de Habilidades Técnicas */
+.about-skills-column {
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category:last-child {
+    margin-bottom: 0;
+}
+
+.skill-category h4 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tags span {
+    background: #ffffff;
+    color: #1035a8;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-tags span:hover {
+    background: #1035a8;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(16, 53, 168, 0.2);
+    border-color: #1035a8;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 5%;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .about-skills-column {
+        padding: 2rem;
+    }
+}
