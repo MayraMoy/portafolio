@@ -12,7 +12,9 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="divlogo">
-                <img className="logo" style={{ height: '40px' }} src={logo} alt="Logo" />
+                <a href="#inicio">
+                    <img className="logo" style={{ height: '40px' }} src={logo} alt="Logo" />
+                </a>
             </div>
             
             <div className={`divlinks ${isMenuOpen ? 'active' : ''}`}>

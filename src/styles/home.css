@@ -3,34 +3,69 @@
 .home {
     min-height: 100vh;
     width: 100%;
-    box-sizing: border-box;
+    padding: 20px 5% 40px; 
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 80px 5% 0; /* offset for navbar */
-    background-color: #f8fafc;
-    font-family: 'Poppins', sans-serif;
+    align-items: center;
+
+    background: #f8fafc;
+
     position: relative;
     overflow: hidden;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1400px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+
+    position: relative;
+    z-index: 2;
 }
 
 .home-content {
-    max-width: 800px;
-    z-index: 2;
-    text-align: center;
+    max-width: 700px;
+
     animation: slideUp 1s ease-out forwards;
     opacity: 0;
     transform: translateY(30px);
-    padding: 2rem;
+
+    text-align: left;
+}
+
+.home-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .home-title {
-    font-size: 3.8rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 800;
     color: #0f172a;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
+
+    line-height: 1.05;
     letter-spacing: -1px;
+
+    margin-bottom: 1.5rem;
+}
+
+.home-title .highlight {
+    background: linear-gradient(
+        135deg,
+        #1035a8,
+        #3b82f6
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home-subtitle {
@@ -44,18 +79,38 @@
 
 .home-description {
     font-size: 1.15rem;
-    line-height: 1.8;
+    line-height: 1.9;
+
     color: #475569;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+
+    max-width: 650px;
+
+    margin-bottom: 2rem;
 }
 
 .home-buttons {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    margin-top: 2rem;
+}
+
+.home-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(59,130,246,.15);
+    color: #1035a8;
+    font-size: .95rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(15,23,42,.06);
 }
 
 .btn {
@@ -96,41 +151,131 @@
     transform: translateY(-3px);
 }
 
+.home-stats {
+    display: flex;
+    gap: 3rem;
+
+    margin-top: 3rem;
+}
+
+.home-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-stat strong {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1035a8;
+}
+
+.home-stat span {
+    font-size: .95rem;
+    color: #475569;
+}
+
 /* Animated Glowing Orbs Background */
 .orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
+    filter: blur(120px);
+    opacity: .55;
     z-index: 1;
-    opacity: 0.6;
 }
 
 .orb-1 {
-    width: 500px;
-    height: 500px;
-    background: #e0e7ff; /* light indigo */
-    top: -100px;
-    left: -100px;
+    width: 350px;
+    height: 350px;
+    background: #e0e7ff;
+
+    top: -80px;
+    left: -80px;
+
     animation: drift 12s ease-in-out infinite alternate;
 }
 
 .orb-2 {
-    width: 400px;
-    height: 400px;
-    background: #bae6fd; /* light sky blue */
-    bottom: -50px;
-    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: #bae6fd;
+
+    bottom: -80px;
+    right: -80px;
+
     animation: drift 15s ease-in-out infinite alternate-reverse;
 }
 
 .orb-3 {
-    width: 300px;
-    height: 300px;
-    background: #ddd6fe; /* light violet */
-    top: 30%;
-    left: 40%;
+    width: 250px;
+    height: 250px;
+    background: #ddd6fe;
+
+    top: 40%;
+    left: 50%;
+
     animation: drift 10s ease-in-out infinite alternate;
 }
+
+/* Orbital visual */
+.orbital-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.profile-circle {
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.65);
+    border: 1px solid rgba(59,130,246,.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.orbital-node {
+    position: absolute;
+    background: rgba(255,255,255,0.88);
+    border: 1px solid rgba(59,130,246,.18);
+    border-radius: 50px;
+    padding: 12px 34px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1035a8;
+    text-align: center;
+    line-height: 1.4;
+    backdrop-filter: blur(10px);
+}
+
+.node-top         { top: 5px;   left: 50%; transform: translateX(-50%); }
+.node-right       { right: -10px; top: 50%; transform: translateY(-50%); }
+.node-bottom-right{ bottom: 20px; right: 0; }
+.node-bottom-left { bottom: 20px; left: 0; }
+
+
+
+.availability-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34,197,94,.2);
+    display: inline-block;
+}
+
 
 @keyframes slideUp {
     to {
@@ -151,46 +296,260 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
     .home-content {
-        padding: 2.5rem 1.5rem;
-        margin: 0 1rem;
+        text-align: center;
+        margin: 0 auto;
     }
-    .home-title {
-        font-size: 2.5rem;
-    }
-    .home-subtitle {
-        font-size: 1.4rem;
-    }
+
     .home-description {
-        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .home-buttons {
-        flex-direction: column;
-        gap: 1rem;
+
+    .home-buttons,
+    .home-stats {
+        justify-content: center;
     }
-    .btn {
-        width: 100%;
+
+    .home-visual {
+        order: -1;
     }
 }
 
 @media (max-width: 480px) {
+    .home {
+        padding: 18px 4% 36px;
+    }
+    .home-container {
+        gap: 1.5rem;
+    }
+
     .home-content {
-        padding: 2rem 1rem;
-        margin: 0;
+        padding: 1rem 0;
+        margin: 0 auto;
+        text-align: center;
     }
     .home-title {
-        font-size: 2.1rem;
+        font-size: 1.9rem;
+        line-height: 1.1;
     }
     .home-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
     }
     .home-description {
         font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 100%;
     }
-    /* Reduce la carga visual de los orbes en pantallas muy pequeñas */
-    .orb {
-        filter: blur(50px);
-        opacity: 0.4;
+
+    .home-badge {
+        padding: .45rem .9rem;
+        font-size: .85rem;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        gap: .75rem;
+        align-items: stretch;
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1rem;
+        border-radius: 14px;
+        font-size: 0.98rem;
+        box-sizing: border-box;
+        display: block;
+        margin: 0;
+    }
+
+    .btn-primary {
+        box-shadow: 0 6px 14px rgba(16,53,168,0.32);
+    }
+
+    .btn-primary:hover {
+        transform: none;
+        box-shadow: 0 8px 18px rgba(16,53,168,0.28);
+    }
+
+    .btn-secondary {
+        border-width: 1px;
+        background: #ffffff;
+    }
+
+    .home-stats {
+        flex-direction: row;
+        gap: 1.2rem;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .home-stat strong {
+        font-size: 1.6rem;
+    }
+
+    /* Simplify background orbs on small screens */
+    .orb-1,
+    .orb-2 {
+        display: none;
+    }
+    .orb-3 {
+        width: 160px;
+        height: 160px;
+        top: 45%;
+        left: 55%;
+        filter: blur(40px);
+        opacity: .45;
+    }
+
+    /* Make orbital visual smaller and legible */
+    .orbital-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+    .profile-circle {
+        width: 200px;
+        height: 200px;
+    }
+    .profile-circle img {
+        object-position: center top;
+    }
+    .orbital-node {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Ajustes adicionales para pantallas muy angostas (por ejemplo 388x852) */
+@media (max-width: 420px) {
+    .home {
+        overflow-x: hidden; /* previene scroll horizontal por nodos u orbes */
+    }
+
+    /* Asegurar que el wrapper orbital no desborde y escale bien */
+    .orbital-wrapper {
+        width: min(60vw, 220px);
+        height: min(60vw, 220px);
+        margin: 0 auto;
+    }
+    .profile-circle {
+        width: calc(min(60vw, 220px) - 20px);
+        height: calc(min(60vw, 220px) - 20px);
+    }
+
+    /* Evitar que los nodos salgan de la pantalla */
+    .orbital-node {
+        max-width: 120px;
+        padding: 6px 10px;
+        font-size: 12px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    .node-top { left: 50%; transform: translateX(-50%); top: 6px; }
+    .node-right { right: 6px; top: 50%; transform: translateY(-50%); }
+    .node-bottom-right { right: 6px; bottom: 8px; }
+    .node-bottom-left { left: 6px; bottom: 8px; }
+
+    /* asegurar que el contenido no use tamaños fijos que provoquen overflow */
+    .home-container {
+        padding: 0;
+    }
+}
+
+/* Ajustes puntuales para pantallas muy angostas donde el título y botones se cortan */
+@media (max-width: 388px) {
+    .home {
+        overflow: visible; /* permitir que botones y títulos no se recorten */
+        padding: 12px 4% 30px;
+    }
+
+    .home-container {
+        gap: 1rem;
+    }
+
+    .home-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .home-title {
+        font-size: 1.5rem;
+        line-height: 1.15;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    .home-subtitle {
+        font-size: 1rem;
+    }
+
+    .home-buttons {
+        gap: 0.6rem;
+        padding-bottom: 8px;
+    }
+
+    .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Asegurar que la imagen/perfil no tape el contenido */
+    .orbital-wrapper,
+    .profile-circle {
+        transform: none;
+        position: relative;
+        margin: 0 auto 0.6rem;
+    }
+
+    .orbital-node {
+        font-size: 11px;
+        padding: 6px 8px;
+        max-width: 110px;
+    }
+}
+
+/* Forzar que el avatar y su wrapper no se posicionen encima del título en pantallas muy angostas */
+@media (max-width: 420px) {
+    .orbital-wrapper,
+    .profile-circle {
+        position: static !important;
+        width: min(56vw, 200px) !important;
+        height: min(56vw, 200px) !important;
+        transform: none !important;
+        margin: 0 auto 0.75rem !important;
+    }
+    .profile-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Evitar que los nodos orbiten sobre el contenido; ocultarlos para pantallas muy estrechas */
+    .orbital-node {
+        display: none !important;
+    }
+
+    /* Asegurar que el título quede encima y centrado */
+    .home-title {
+        text-align: center;
+        margin-top: 0.6rem;
+        z-index: 4;
+    }
+
+    /* Botones completos y visibles */
+    .home-buttons {
+        width: 100%;
+        padding: 0 4px;
+        z-index: 4;
+        position: relative;
     }
 }
