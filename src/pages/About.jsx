@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/about.css';
 import { FaLayerGroup, FaServer, FaTools } from 'react-icons/fa';
 import { FiChevronRight } from 'react-icons/fi';
-import programacionImg from '../assets/images/programacion.jpg'; 
+import programacionImg from '../assets/images/programacion.webp'; 
 
 const About = () => {
     return (

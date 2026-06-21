@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/home.css';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import profileImg from '../assets/images/mayra.jpg'; 
+import profileImg from '../assets/images/mayra.webp'; 
 
 const Home = () => {
     return (
