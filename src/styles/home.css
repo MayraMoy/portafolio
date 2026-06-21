@@ -35,20 +35,6 @@
     transform: translateY(30px);
 }
 
-.home-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .5rem 1.1rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.85);
-    border: 1px solid rgba(59,130,246,.2);
-    color: #1035a8;
-    font-size: .88rem;
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-}
-
 .home-title {
     font-size: clamp(1.8rem, 3.5vw, 3rem);
     font-weight: 800;
@@ -56,12 +42,6 @@
     line-height: 1.08;
     letter-spacing: -1px;
     margin-bottom: 1.2rem;
-}
-
-.home-title .highlight {
-    background: linear-gradient(135deg, #1035a8, #3b82f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .home-description {
@@ -78,15 +58,6 @@
     font-size: 0.88rem;
     color: #475569;
     margin-bottom: 1.2rem;
-}
-
-.availability-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: #22c55e;
-    box-shadow: 0 0 0 3px rgba(34,197,94,.2);
-    flex-shrink: 0;
 }
 
 .home-buttons {
@@ -112,7 +83,7 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #1035a8, #3b82f6);
+    background: #1035a8;
     color: #fff;
     border: none;
     box-shadow: 0 8px 20px -8px rgba(16, 53, 168, 0.55);
@@ -172,29 +143,6 @@
     background: #005f99;
 }
 
-.home-stats {
-    display: flex;
-    gap: 2rem;
-}
-
-.home-stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.home-stat strong {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #1035a8;
-    line-height: 1;
-}
-
-.home-stat span {
-    font-size: .82rem;
-    color: #475569;
-    margin-top: 3px;
-}
-
 /* ========================
    VISUAL / ORBITAL
 ======================== */
@@ -234,58 +182,7 @@
     object-position: top center;
 }
 
-.orbital-node {
-    position: absolute;
-    background: rgba(255,255,255,0.92);
-    border: 1px solid rgba(59,130,246,.2);
-    border-radius: 50px;
-    padding: 6px 14px;
-    font-size: clamp(10px, 1.1vw, 13px);
-    font-weight: 600;
-    color: #1035a8;
-    text-align: center;
-    line-height: 1.35;
-    white-space: nowrap;
-}
 
-.node-top          { top: 4%;  left: 50%; transform: translateX(-50%); }
-.node-right        { right: 0; top: 50%;  transform: translateY(-50%); }
-.node-bottom-right { bottom: 8%; right: 4%; }
-.node-bottom-left  { bottom: 8%; left: 4%; }
-
-/* ========================
-   ORBS
-======================== */
-
-.orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: .5;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.orb-1 {
-    width: 320px; height: 320px;
-    background: #e0e7ff;
-    top: -80px; left: -80px;
-    animation: drift 12s ease-in-out infinite alternate;
-}
-
-.orb-2 {
-    width: 280px; height: 280px;
-    background: #bae6fd;
-    bottom: -80px; right: -60px;
-    animation: drift 15s ease-in-out infinite alternate-reverse;
-}
-
-.orb-3 {
-    width: 220px; height: 220px;
-    background: #ddd6fe;
-    top: 40%; left: 50%;
-    animation: drift 10s ease-in-out infinite alternate;
-}
 
 /* ========================
    ANIMATIONS
@@ -338,12 +235,8 @@
         text-align: center;
     }
 
-    .home-availability,
     .home-buttons,
     .home-socials,
-    .home-stats {
-        justify-content: center;
-    }
 
     .orbital-wrapper {
         width: min(280px, 70vw);
@@ -391,24 +284,6 @@
         border-radius: 14px;
     }
 
-    .home-stats {
-        gap: 1.4rem;
-    }
-
-    .home-stat strong {
-        font-size: 1.4rem;
-    }
-
-    .orb-1, .orb-2 {
-        display: none;
-    }
-
-    .orb-3 {
-        width: 150px;
-        height: 150px;
-        filter: blur(50px);
-        opacity: .35;
-    }
 }
 
 /* ========================

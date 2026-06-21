@@ -1,101 +1,53 @@
 import React from 'react';
 import '../styles/about.css';
-// Cambiá esta línea en el import:
-import { FaGraduationCap, FaRocket, FaSearch, FaChartBar, FaPencilRuler, FaCode, FaChartLine, FaLayerGroup, FaServer, FaTools } from 'react-icons/fa';
+import { FaLayerGroup, FaServer, FaTools } from 'react-icons/fa';
 import { FiChevronRight } from 'react-icons/fi';
+import programacionImg from '../assets/images/programacion.jpg'; 
 
 const About = () => {
     return (
         <section id="sobre-mi" className="about">
             <div className="about-container">
 
-                <div className="about-header">
-                    <h2 className="section-title">Sobre Mí</h2>
-                    <div className="title-underline"></div>
-                    <p className="section-intro">
-                        Mi enfoque combina análisis de requisitos, diseño de soluciones y desarrollo técnico,
-                        priorizando siempre que cada sistema responda a necesidades reales y aporte valor.
-                    </p>
-                </div>
+                <div className="about-header-content">
 
-                {/* TARJETAS DESTACADAS */}
-                <div className="about-highlights">
-                    <div className="highlight-card">
-                        <div className="hcard-icon"><FaGraduationCap /></div>
-                        <h3>Formación</h3>
-                        <p>Actualmente curso el tercer año de la Tecnicatura en Desarrollo de Software.</p>
-                        <p>Poseo el título de Programadora Profesional otorgado por el Ministerio de Educación
-                        y certificaciones en Inteligencia Artificial y Ciencia de Datos.</p>
+                    <div className="about-header-image">
+                        <img src={programacionImg} alt="Sobre mí" />
                     </div>
-                    <div className="highlight-card">
-                        <div className="hcard-icon"><FaRocket /></div>
-                        <h3>Especialización</h3>
-                        <p>Desarrollo aplicaciones web utilizando React, Node.js y APIs REST.</p>
-                        <p>Me interesa especialmente la integración de Inteligencia Artificial y análisis de datos
-                        para optimizar procesos y mejorar la experiencia de usuario.</p>
-                    </div>
-                </div>
 
-                {/* PROCESO */}
-                <div className="process-section">
-                    <h3 className="subsection-title">Cómo transformo una idea en una solución</h3>
-                    <div className="process-grid">
-
-                        <div className="process-card">
-                            <div className="process-num">01</div>
-                            <div className="process-icon"><FaSearch /></div>
-                            <h4>Relevamiento</h4>
-                            <p>Entiendo el problema, los objetivos y las necesidades del usuario.</p>
-                            <span className="process-arrow"><FiChevronRight /></span>
-                        </div>
-
-                        <div className="process-card">
-                            <div className="process-num">02</div>
-                            <div className="process-icon"><FaChartBar /></div>
-                            <h4>Análisis</h4>
-                            <p>Analizo procesos, datos y oportunidades para definir la mejor estrategia.</p>
-                            <span className="process-arrow"><FiChevronRight /></span>
-                        </div>
-
-                        <div className="process-card">
-                            <div className="process-num">03</div>
-                            <div className="process-icon"><FaPencilRuler /></div>
-                            <h4>Diseño</h4>
-                            <p>Defino funcionalidades, flujos de usuario y arquitectura de la solución.</p>
-                            <span className="process-arrow"><FiChevronRight /></span>
-                        </div>
-
-                        <div className="process-card">
-                            <div className="process-num">04</div>
-                            <div className="process-icon"><FaCode /></div>
-                            <h4>Desarrollo</h4>
-                            <p>Construyo aplicaciones escalables, seguras y orientadas a producto.</p>
-                            <span className="process-arrow"><FiChevronRight /></span>
-                        </div>
-
-                        <div className="process-card">
-                            <div className="process-num">05</div>
-                            <div className="process-icon"><FaChartLine /></div>
-                            <h4>Resultado</h4>
-                            <p>Entrego soluciones que generan valor real y optimizan procesos.</p>
-                        </div>
+                    <div className="about-header-text">
+                        <h2 className="section-title">Sobre Mí</h2>
+                        <div className="title-underline"></div>
+                        <p className="section-intro">
+                            Actualmente curso el tercer año de la Tecnicatura en Desarrollo de Software.
+                            Poseo el título de Programadora Profesional otorgado por el Ministerio de Educación
+                            y certificaciones en Inteligencia Artificial y Ciencia de Datos.
+                            <br></br>
+                            Desarrollo aplicaciones web utilizando React, Node.js y APIs REST.
+                            Me interesa especialmente la integración de Inteligencia Artificial y análisis de datos
+                            para optimizar procesos y mejorar la experiencia de usuario.
+                            <br></br>
+                            Mi enfoque combina análisis de requisitos, diseño de soluciones y desarrollo técnico,
+                            priorizando siempre que cada sistema responda a necesidades reales y aporte valor.
+                        </p>
 
                     </div>
+
                 </div>
 
                 {/* EDUCACIÓN */}
                 <div className="education-section">
                     <h3 className="subsection-title">Educación y Formación</h3>
-                    <div className="timeline">
+                    <div className="education-list">
 
-                        <div className="timeline-item">
+                        <div className="education-item">
                             <div className="timeline-dot"></div>
                             <h4>Tecnicatura en Desarrollo de Software</h4>
                             <p className="timeline-institution">UPC Instituto Superior "Dr. Bernardo Houssay"</p>
                             <p className="timeline-date">2024 – Actualidad</p>
                         </div>
 
-                        <div className="timeline-item">
+                        <div className="education-item">
                             <div className="timeline-dot"></div>
                             <h4>Formación Complementaria</h4>
                             <div className="skill-tags">

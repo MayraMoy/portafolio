@@ -77,7 +77,22 @@
 .navbar-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+}
+
+.cv-download a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.cv-download a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
 }
 
 .button {
@@ -99,6 +114,16 @@
     color: #1035a8;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button-secondary {
+    background: transparent;
+    color: #1035a8;
+    border-color: #1035a8;
+}
+
+.button-secondary:hover {
+    background: rgba(16, 53, 168, 0.08);
 }
 
 .divsocial {

@@ -91,7 +91,7 @@ const ProjectModal = ({ project, onClose }) => {
                 <p className="modal-role">{project.role}</p>
                 
                 <div className="modal-body">
-                    <p className="modal-description">{project.description}</p>
+                    <p className="modal-description">{project.longDescription}</p>
                     
                     <h4 className="modal-subtitle">Características Clave</h4>
                     <ul className="modal-features">
@@ -137,6 +137,8 @@ const Projects = () => {
             title: "Chatbot de Captación de Leads",
             role: "Desarrollador Full Stack | Abril 2026 - Presente",
             description: "Flujo conversacional estructurado para obtener información útil de los usuarios. Interfaz desarrollada en React y persistencia de leads mediante integración con Google Sheets API.",
+            longDescription: "Existía una necesidad de automatizar la captación de prospectos y organizar la información de forma inmediata. Por el cual diseñé un flujo conversacional estructurado en React, integrando Google Sheets API mediante Apps Script para la persistencia de datos. Al final logré una simplicidad operativa total para el cliente, permitiendo la captura y estructuración de leads en tiempo real sin infraestructuras complejas.",
+
             features: [
                 "Análisis y definición de flujo conversacional",
                 "Interfaz interactiva en tiempo real",
@@ -151,6 +153,7 @@ const Projects = () => {
             title: "Plataforma de Intercambio Comunitario",
             role: "Desarrollador Full Stack | Sep 2023 - Presente",
             description: "Aplicación web completa para la gestión de usuarios y publicaciones. Arquitectura end-to-end desde el relevamiento de requisitos hasta la implementación de frontend y backend.",
+            longDescription: "Desarrolle un sistema funcional de intercambio bajo restricciones de tiempo y recursos técnicos específicos. Donde lideré el desarrollo end-to-end, desde las entrevistas con el cliente para el relevamiento de requisitos hasta el modelado de la base de datos en MongoDB y el desarrollo del backend en Node.js/Express. Finalmente entregué una arquitectura escalable que prioriza la usabilidad y claridad en la interacción del frontend (React), cumpliendo con los objetivos de negocio planteados inicialmente",
             features: [
                 "Desarrollo de frontend priorizando usabilidad",
                 "Backend y APIs REST con Node.js y Express",
