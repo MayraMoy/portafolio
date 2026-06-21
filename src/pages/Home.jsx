@@ -30,7 +30,7 @@ const Home = () => {
                 <div className="home-visual">
                     <div className="orbital-wrapper">
                         <div className="profile-circle">
-                            <img src={profileImg} alt="Mayra" />
+                            <img src={profileImg} alt="Mayra Yazmin Moyano" width="364" height="344" />
                         </div>
                     </div>
                 </div>

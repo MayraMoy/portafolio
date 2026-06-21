@@ -30,7 +30,10 @@ const ProjectCard = ({ project, onOpenDetails }) => {
                         <img 
                             src={project.images[currentImg]} 
                             alt={`${project.title} screenshot`} 
-                            className="project-image" 
+                            className="project-image"
+                            width="360"
+                            height="220"
+                            loading="lazy"
                         />
                         {project.images.length > 1 && (
                             <>
