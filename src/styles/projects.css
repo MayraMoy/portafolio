@@ -17,16 +17,26 @@
 
 /* --- SLIDER (2 en 2) --- */
 .projects-slider {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "arrow-left grid arrow-right";
     align-items: center;
     gap: 1rem;
 }
 
+.slider-arrow-left {
+    grid-area: arrow-left;
+}
+
+.slider-arrow-right {
+    grid-area: arrow-right;
+}
+
 .projects-grid {
+    grid-area: grid;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
-    flex: 1;
     min-width: 0;
 }
 
@@ -410,6 +420,26 @@
 @media (max-width: 900px) {
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* En mobile el grid de tarjetas queda arriba y las flechas pasan
+       a una fila propia debajo, centradas, en vez de a los costados */
+    .projects-slider {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "grid grid"
+            "arrow-left arrow-right";
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .slider-arrow-left {
+        justify-self: end;
+    }
+
+    .slider-arrow-right {
+        justify-self: start;
     }
 }
 
@@ -417,8 +447,11 @@
     .projects {
         padding: 80px 5%;
     }
-    .projects-slider {
-        gap: 0.5rem;
+    .project-image-container {
+        height: 200px;
+    }
+    .project-content {
+        padding: 1.5rem;
     }
     .slider-arrow {
         width: 40px;

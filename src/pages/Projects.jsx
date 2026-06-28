@@ -72,10 +72,10 @@ const ProjectCard = ({ project, onOpenDetails }) => {
                 </p>
 
                 <div className="project-stack">
-                    {project.stack.slice(0, 3).map((tech, i) => (
+                    {(project.stack || []).slice(0, 3).map((tech, i) => (
                         <span key={i} className="stack-tag">{tech}</span>
                     ))}
-                    {project.stack.length > 3 && (
+                    {project.stack && project.stack.length > 3 && (
                         <span className="stack-tag">+{project.stack.length - 3}</span>
                     )}
                 </div>
@@ -111,12 +111,16 @@ const ProjectModal = ({ project, onClose }) => {
                         ))}
                     </ul>
 
-                    <h4 className="modal-subtitle">Tecnologías</h4>
-                    <div className="modal-stack">
-                        {project.stack.map((tech, i) => (
-                            <span key={i} className="stack-tag">{tech}</span>
-                        ))}
-                    </div>
+                    {project.stack && project.stack.length > 0 && (
+                        <>
+                            <h4 className="modal-subtitle">Tecnologías</h4>
+                            <div className="modal-stack">
+                                {project.stack.map((tech, i) => (
+                                    <span key={i} className="stack-tag">{tech}</span>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
 
                 <div className="modal-actions">
@@ -203,7 +207,7 @@ const Projects = () => {
                 "Planes y precios de Community Manager seleccionables",
                 "Maquetación a medida según identidad de marca"
             ],
-            stack: ["Producción de contenido", "Edición de contenido", "Impresión y diseño"],
+            stack: ["React", "JavaScript", "CSS"],
             images: [cm1, cm2],
             demoLink: "https://portafolio-melina.vercel.app/"
         },
