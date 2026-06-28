@@ -15,10 +15,62 @@
     margin-bottom: 4rem;
 }
 
+/* --- SLIDER (2 en 2) --- */
+.projects-slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.slider-arrow {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #1035a8;
+    background: #ffffff;
+    color: #1035a8;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background: #1035a8;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2.5rem;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+    background: #1035a8;
+    transform: scale(1.2);
 }
 
 /* Tarjeta de Proyecto Compacta */
@@ -63,6 +115,20 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, #e0e7ff 0%, #bae6fd 100%);
+}
+
+.status-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #f59e0b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .project-content {
@@ -140,7 +206,7 @@
     color: #ffffff;
 }
 
-/* Estilos del Carrusel */
+/* Estilos del Carrusel de imágenes dentro de cada tarjeta */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -341,9 +407,23 @@
     box-shadow: 0 5px 15px rgba(16, 53, 168, 0.2);
 }
 
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .projects {
         padding: 80px 5%;
+    }
+    .projects-slider {
+        gap: 0.5rem;
+    }
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
     .modal-content {
         padding: 2rem;
