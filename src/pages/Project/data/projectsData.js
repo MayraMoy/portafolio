@@ -55,8 +55,8 @@ export const projectsData = [
                 "CSS"
             ],
             images: [portfolio1, portfolio2],
-            repoLink: "https://github.com/MayraMoy/tu-portafolio",
-            demoLink: "https://tu-portafolio.vercel.app"
+            repoLink: "https://github.com/MayraMoy/portafolio.git",
+            demoLink: "https://portafolio-jade-delta.vercel.app/"
         },
         {
             title: "Chatbot de Captación de Leads",
