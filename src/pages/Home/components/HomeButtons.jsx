@@ -21,7 +21,7 @@ const HomeButtons = () => (
       href="#proyectos"
       className="flex-1 inline-flex items-center justify-center gap-[0.6rem] py-[0.9rem] px-[1.6rem] rounded-xl font-semibold text-sm text-white bg-indigo-500 border border-indigo-500 shadow-[0_8px_20px_-4px_rgba(99,102,241,0.4)] transition-all duration-[250ms] hover:bg-indigo-600 hover:border-indigo-600 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-4px_rgba(99,102,241,0.5)]"
     >
-      Explorar Proyectos
+      Ver Proyectos
       <ArrowRightIcon />
     </a>
 

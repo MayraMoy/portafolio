@@ -1,5 +1,5 @@
 import HomeButtons from "./HomeButtons";
-import SkillsList from "./SkillsList";
+
 
 const HomeContent = () => (
   <div className="flex flex-col items-start">
@@ -16,7 +16,6 @@ const HomeContent = () => (
     </p>
 
     <HomeButtons />
-    <SkillsList />
   </div>
 );
 

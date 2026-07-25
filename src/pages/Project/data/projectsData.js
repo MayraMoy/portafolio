@@ -1,72 +1,62 @@
 import chatbot1 from '../../../assets/images/chatbot1.png';
 import chatbot2 from '../../../assets/images/chatbot2.png';
-import login1 from '../../../assets/images/circulapp1.png';
-import register1 from '../../../assets/images/circulapp2.png';
-import turismo1 from '../../../assets/images/turismo1.png';
-import turismo2 from '../../../assets/images/turismo2.png';
-import cm1 from '../../../assets/images/cm1.png';
-import cm2 from '../../../assets/images/cm2.png';
-import gestion1 from '../../../assets/images/gestion1.png';
+import horas1 from '../../../assets/images/horas1.png'
+import horas2 from '../../../assets/images/horas2.png'
+import portfolio1 from '../../../assets/images/portafolio1.png'
+import portfolio2 from '../../../assets/images/portafolio2.png'
+
 
 export const projectsData = [
+
         {
-            title: "Plataforma de Intercambio Comunitario",
-            role: "Desarrollador Full Stack | Sep 2023 - Presente",
-            description: "Plataforma web colaborativa para la gestión y trueque de productos/servicios en tiempo real.",
-            longDescription: "Diseño e implementación end-to-end de un sistema de intercambio comunitario escalable. Lideré el relevamiento de requisitos con clientes y el modelado de la arquitectura de datos, garantizando una UX fluida y alta usabilidad.",
+            title: "Sistema Web de Gestión de Horas Técnicas",
+            role: "Desarrollador Backend | Jun 2026 - Presente",
+            description: "Plataforma web para digitalizar el registro, validación y seguimiento de horas técnicas en instituciones educativas.",
+            longDescription: "Desarrollo de una aplicación web orientada a reemplazar el proceso manual de registro de horas técnicas mediante una solución centralizada. El sistema permite a los estudiantes registrar sus actividades, a los docentes validar las horas realizadas y a la institución realizar un seguimiento del progreso de cada alumno.",
             features: [
-                "Liderazgo end-to-end desde entrevistas de requisitos hasta despliegue",
-                "Modelado y optimización de base de datos en MongoDB",
-                "Desarrollo de API RESTful con Node.js y Express",
-                "Frontend modular y reactivo construido con React"
+                "Diseño e implementación de una API REST con Spring Boot",
+                "Modelado de la base de datos y relaciones utilizando JPA/Hibernate",
+                "Sistema de autenticación basado en roles (Estudiante y Docente)",
+                "Arquitectura por capas aplicando DTOs, Mappers, Services y Repositories"
             ],
-            stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
-            images: [login1, register1], 
-            repoLink: "https://github.com/MayraMoy/circulapp_info.git",
-            demoLink: "https://youtube.com/playlist?list=PL2TQRpsf4rxBl4-f_gXE4DuhFWjA2k7vb&si=MxFeHYNP4kvoEK5I"
+            stack: [
+                "Java",
+                "Spring Boot",
+                "Spring Data JPA",
+                "Hibernate",
+                "MySQL",
+                "Maven",
+                "Lombok",
+                "REST API"
+            ],
+            images: [horas1, horas2],
+            repoLink: "https://github.com/MayraMoy/tecnica.git",
+            demoLink: ""
         },
         {
-            title: "Sistema de Gestión de Información Institucional",
-            role: "Desarrolladora Full Stack | En Desarrollo",
-            description: "Plataforma empresarial para centralizar la gestión de noticias, resoluciones y comunicaciones académicas.",
-            longDescription: "Sistema en desarrollo orientado a digitalizar y automatizar procesos institucionales, sustituyendo flujos manuales por un panel con roles, auditoría y reportes estructurados.",
+            title: "Portafolio Personal",
+            role: "Frontend Developer | Jul 2026 - Presente",
+            description: "Portafolio profesional desarrollado para presentar proyectos, experiencia y habilidades mediante una interfaz moderna, modular y responsive.",
+            longDescription: "Diseño e implementación de un portafolio personal con una arquitectura frontend escalable utilizando React, Vite y Tailwind CSS. El proyecto fue reorganizado mediante una estructura modular basada en componentes reutilizables, separación por páginas y gestión desacoplada de datos, facilitando el mantenimiento y la incorporación de nuevas funcionalidades. Además, se trabajó en la optimización de la experiencia de usuario mediante una interfaz responsive, navegación fluida y una identidad visual consistente.",
             features: [
-                "Control de acceso basado en roles (RBAC) con Spring Security",
-                "Módulo de procesamiento e ingreso de noticias y resoluciones",
-                "Generación automática de reportes y consultas dinámicas"
+                "Arquitectura modular basada en componentes reutilizables",
+                "Migración de CSS tradicional a Tailwind CSS",
+                "Organización del proyecto por páginas, componentes, hooks y fuentes de datos",
+                "Diseño responsive adaptable a distintos dispositivos",
+                "Optimización de la navegación y experiencia de usuario",
+                "Código mantenible y escalable siguiendo buenas prácticas de React"
             ],
-            stack: ["Spring Boot", "Java", "Spring Security", "MySQL"],
-            status: "in-progress",
-            images: [gestion1],
-        },
-        {
-            title: "Página Web de Turismo",
-            role: "Desarrolladora Frontend",
-            description: "Portal turístico interactivo y responsive para la difusión de destinos, actividades y hospedaje.",
-            longDescription: "Plataforma de promoción turística enfocada en la velocidad de carga y navegación intuitiva. Diseñada para ofrecer una experiencia fluida tanto en dispositivos móviles como de escritorio.",
-            features: [
-                "Maquetación Mobile-First 100% responsive",
-                "Galería dinámica e interactiva de atractivos locales",
-                "Secciones de contacto optimizadas para conversión"
+            stack: [
+                "React",
+                "Vite",
+                "Tailwind CSS",
+                "JavaScript",
+                "React Router",
+                "CSS"
             ],
-            stack: ["React", "JavaScript", "Tailwind CSS"],
-            images: [turismo1, turismo2],
-            repoLink: "https://github.com/MayraMoy/serrezuela01.git",
-            demoLink: "https://serrezuela01.vercel.app/"
-        },
-        {
-            title: "Portafolio para Community Manager",
-            role: "Desarrolladora Frontend",
-            description: "Sitio web profesional a medida orientado a la exhibición y venta de servicios de marketing digital.",
-            longDescription: "Desarrollo web personalizado para destacar servicios de gestión de redes, diseño y creación de contenido. Estructurado para guiar al usuario hacia la contratación mediante llamados a la acción claros.",
-            features: [
-                "Estructura orientada a conversión y captura de clientes",
-                "Selector de planes y paquetes de servicios dinámicos",
-                "Diseño coherente con la identidad visual de la marca"
-            ],
-            stack: ["React", "JavaScript", "CSS"],
-            images: [cm1, cm2],
-            demoLink: "https://portafolio-melina.vercel.app/"
+            images: [portfolio1, portfolio2],
+            repoLink: "https://github.com/MayraMoy/tu-portafolio",
+            demoLink: "https://tu-portafolio.vercel.app"
         },
         {
             title: "Chatbot de Captación de Leads",
