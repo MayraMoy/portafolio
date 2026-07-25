@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon } from "../../navbar/icons";
+import { GitHubIcon, LinkedInIcon } from "../../Navbar/icons/index";
 
 export const footerSocialLinks = [
   {
