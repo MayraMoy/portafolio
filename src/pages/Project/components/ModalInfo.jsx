@@ -17,7 +17,7 @@ const ModalInfo = ({ project }) => (
 
     {project.features && project.features.length > 0 && (
       <div className="mb-6">
-        <SectionHeading>Características Clave</SectionHeading>
+        <SectionHeading>Decisiones Técnicas</SectionHeading>
         <ul className="pl-5 text-[0.9rem] text-slate-300 m-0 list-disc">
           {project.features.map((feature, idx) => (
             <li key={idx} className="mb-1.5 leading-relaxed">
