@@ -11,11 +11,13 @@ const PostHeader = ({ avatar, name, role, timeAgo }) => (
       <div className="min-w-0">
         <p className="text-white text-sm font-semibold truncate">{name}</p>
         <p className="text-slate-400 text-xs truncate">{role}</p>
-        <p className="text-slate-500 text-xs">{timeAgo}</p>
       </div>
     </div>
 
-    <FaLinkedin className="text-blue-500 text-xl flex-shrink-0" />
+    <div className="flex flex-col items-end gap-1">
+      <p className="text-slate-500 text-xs">{timeAgo}</p>
+      <FaLinkedin className="text-blue-500 text-xl flex-shrink-0" />
+    </div>
   </div>
 );
 

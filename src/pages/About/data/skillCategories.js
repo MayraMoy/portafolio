@@ -11,12 +11,12 @@ export const skillCategories = [
     id: "backend",
     title: "Backend & Bases de Datos",
     Icon: FaServer,
-    skills: ["Node.js", "Express", "Spring Boot", "APIs REST", "MongoDB", "MySQL", "SQLite"],
+    skills: ["Node.js", "Express", "Java", "Spring Boot", "APIs REST", "MongoDB", "MySQL", "SQLite"],
   },
   {
     id: "herramientas",
     title: "Herramientas & Estrategia",
     Icon: FaTools,
-    skills: ["Git & GitHub", "Postman", "SEO Técnico", "UI/UX Principles"],
+    skills: ["Git & GitHub", "Postman", "SEO Técnico", "Scrum"],
   },
 ];
