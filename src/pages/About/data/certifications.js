@@ -19,4 +19,9 @@ export const certifications = [
     label: "Inteligencia Artificial",
     href: "https://www.linkedin.com/in/mayra-yazmin-moyano/overlay/Certifications/2045278763/treasury/?profileId=ACoAADcHbMYBikH31Hg7NupD4XdhVTjSiC3d7JM",
   },
+  {
+    id: "diseño-ux",
+    label: "Introducción al Diseño UX",
+    href: "https://www.linkedin.com/in/mayra-yazmin-moyano/overlay/Certifications/2118803900/treasury/?profileId=ACoAADcHbMYBikH31Hg7NupD4XdhVTjSiC3d7JM",
+  },
 ];
