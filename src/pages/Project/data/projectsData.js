@@ -2,14 +2,16 @@ import chatbot1 from '../../../assets/images/chatbot1.png';
 import chatbot2 from '../../../assets/images/chatbot2.png';
 import horas1 from '../../../assets/images/horas1.png'
 import horas2 from '../../../assets/images/horas2.png'
+import horas3 from '../../../assets/images/horas3.png'
+import circular1 from '../../../assets/images/circular1.png'
+import circular2 from '../../../assets/images/circular2.png'
 import portfolio1 from '../../../assets/images/portafolio1.png'
 import portfolio2 from '../../../assets/images/portafolio2.png'
-
 
 export const projectsData = [
 
         {
-            title: "Sistema Web de Gestión de Horas Técnicas",
+            title: "Sistema Web para el Registro y Seguimiento de Horas de Práctica Técnica",
             role: "Desarrollador Backend | Jun 2026 - Presente",
             description: "Plataforma web para digitalizar el registro, validación y seguimiento de horas técnicas en instituciones educativas.",
             longDescription: "Desarrollo de una aplicación web orientada a reemplazar el proceso manual de registro de horas técnicas mediante una solución centralizada. El sistema permite a los estudiantes registrar sus actividades, a los docentes validar las horas realizadas y a la institución realizar un seguimiento del progreso de cada alumno.",
@@ -29,9 +31,37 @@ export const projectsData = [
                 "Lombok",
                 "REST API"
             ],
-            images: [horas1, horas2],
+            images: [horas1, horas2, horas3],
             repoLink: "https://github.com/MayraMoy/tecnica.git",
             demoLink: ""
+        },
+        {
+            title: "Plataforma de Economía Circular",
+            role: "Desarrolladora Full Stack | Septiembre 2025 – Diciembre 2025 · Scrum Master | Julio 2026 – Presente · Córdoba, Argentina",
+            description: "Plataforma web comunitaria que facilita el intercambio, reutilización y recuperación de materiales, conectando a personas interesadas en darles una nueva utilidad a recursos que ya no necesitan.",
+            longDescription: "Proyecto orientado a promover la economía circular mediante una plataforma web donde los usuarios pueden publicar y gestionar materiales disponibles para intercambio o reutilización. Participé en el desarrollo Full Stack de la aplicación, trabajando en el frontend, backend y gestión de datos. También participé en el desarrollo de funcionalidades de autenticación, gestión de usuarios y roles, publicaciones, validación de materiales y contenidos educativos. Actualmente desempeño el rol de Scrum Master, facilitando la organización del equipo, el seguimiento del trabajo y la coordinación del desarrollo.",
+            features: [
+                "La plataforma incorpora autenticación y gestión de roles para controlar el acceso a las diferentes funcionalidades según los permisos de cada usuario.",
+                "Los materiales publicados son sometidos a validaciones para verificar que cumplan con los criterios definidos por la plataforma.",
+                "Las imágenes de las publicaciones se gestionan mediante Cloudinary para facilitar su almacenamiento y visualización.",
+                "El frontend se comunica con el backend mediante una API REST desarrollada con Node.js y Express.",
+                "Se utiliza MongoDB con Mongoose para gestionar la información de usuarios, publicaciones, materiales y demás entidades del sistema.",
+                "Actualmente desempeño el rol de Scrum Master, facilitando la organización del equipo, el seguimiento de tareas y la coordinación de las actividades de desarrollo."
+            ],
+            stack: [
+                "React",
+                "JavaScript",
+                "Vite",
+                "Tailwind CSS",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Mongoose",
+                "JWT",
+                "Cloudinary",
+            ],
+            images: [circular1, circular2],
+            repoLink: "",
         },
         {
             title: "Portafolio Personal",

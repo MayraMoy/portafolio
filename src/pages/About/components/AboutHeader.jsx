@@ -19,13 +19,13 @@ const AboutHeader = ({ image }) => (
 
       <div className="flex flex-col gap-[1.1rem] text-[clamp(0.95rem,1.15vw,1.05rem)] leading-[1.8] text-slate-400 max-w-[62ch] [&_strong]:text-slate-50 [&_strong]:font-semibold">
         <p>
-          Actualmente curso el tercer año de la <strong>Tecnicatura en Desarrollo de Software</strong> y cuento con el título de <strong>Programadora Profesional</strong> otorgado por el Ministerio de Educación, sumado a certificaciones en Inteligencia Artificial y Ciencia de Datos.
+          Actualmente curso el tercer año de la <strong>Tecnicatura en Desarrollo de Software</strong> y cuento con el título de <strong>Programadora Profesional</strong> otorgado por el Ministerio de Educación.
         </p>
         <p>
-          Especializada en el desarrollo de aplicaciones web con <strong>React, Node.js y APIs REST</strong>. Me apasiona integrar IA y análisis de datos para automatizar procesos y optimizar la experiencia de usuario.
+          Busco desarrollarme en el área de <strong>desarrollo de software Full Stack</strong>, especialmente en proyectos donde pueda participar desde el análisis de requerimientos hasta el diseño e implementación de la solución.
         </p>
         <p>
-          Mi enfoque abarca desde el análisis de requerimientos hasta la arquitectura final, enfocándome en construir <strong>sistemas de gestión y software escalable</strong> que aporten valor real a negocios y usuarios.
+          Me caracterizo por la <strong>capacidad de investigación</strong>, <strong>pensamiento analítico</strong>, <strong>organización</strong>, <strong>aprendizaje autónomo</strong> y <strong>adaptación al trabajo en equipo</strong>. Me interesa comprender el problema antes de implementar y buscar soluciones que respondan realmente a las necesidades de usuarios y organizaciones.
         </p>
       </div>
     </div>
